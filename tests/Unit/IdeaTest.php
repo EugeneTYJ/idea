@@ -9,7 +9,6 @@ test('it belongs to a user', function () {
     expect($idea->user)->toBeInstanceOf(User::class);
 });
 
-
 test('it can have steps', function () {
     $idea = Idea::factory()->create();
 
@@ -22,8 +21,3 @@ test('it can have steps', function () {
     expect($idea->fresh()->steps)->toHaveCount(1);
 
 });
-
-
-
-
-

@@ -48,11 +48,13 @@ label {
 }
 
 .textarea:focus-visible {
-.textarea:focus-visible {
     outline: 0;
-    box-shadow: 0 0 0 calc(var(--spacing) * 0.5) var(--color-background),
+    box-shadow:
+        0 0 0 calc(var(--spacing) * 0.5) var(--color-background),
         0 0 0 calc(var(--spacing) * 1) var(--color-primary);
-}.label {
+}
+
+.label {
     display: block;
     font-size: var(--text-sm);
 }

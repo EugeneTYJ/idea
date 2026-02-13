@@ -1,4 +1,5 @@
 <?php
+
 use Illuminate\Support\Facades\Auth;
 
 it('registers a user', function () {
@@ -26,5 +27,4 @@ it('requires a valid email', function () {
         ->click('Create Account')
         ->assertPathIs('/register');
 
-    
 });

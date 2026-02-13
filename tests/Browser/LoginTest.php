@@ -1,18 +1,17 @@
 <?php
 
 /**
- * @var \Tests\TestCase $this
+ * @var TestCase $this
  */
-
 use App\Models\User;
-use Illuminate\Support\Facades\Auth;
+use Tests\TestCase;
 
 it('logs in a user', function () {
     User::factory()->create([
         'email' => 'john@example.com',
         'password' => bcrypt('password123!@#'),
     ]);
-    
+
     visit('/login')
         ->fill('email', 'john@example.com')
         ->fill('password', 'password123!@#')
@@ -23,12 +22,11 @@ it('logs in a user', function () {
 
 });
 
-
 it('logs out a user', function () {
     $user = User::factory()->create();
 
     $this->actingAs($user);
-    
+
     visit('/')->click('Log Out');
 
     $this->assertGuest();
